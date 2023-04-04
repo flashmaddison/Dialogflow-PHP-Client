@@ -6,6 +6,8 @@ I built this for my personal portfolio website originally, both to build out som
 first to get authentication and API calls working (maybe I was reading the wrong documentation haha)! Anyway, once I got it working I decided 
 to tidy up the code as best I can, and post it on github in case anyone else finds a use for it.
 
+[Donate if you want!](https://www.paypal.com/donate/?hosted_button_id=PLSQDDZ3MCM6Q)
+
 # Features
  - Authentication using a service account to retrieve an access token
  - PHP for API calls, Javascript & HTML for user interface
