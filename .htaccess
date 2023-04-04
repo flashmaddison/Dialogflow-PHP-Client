@@ -1,0 +1,5 @@
+<IfModule mod_authz_core.c>
+    <Files "*.json">
+        Require all denied
+    </Files>
+</IfModule>
