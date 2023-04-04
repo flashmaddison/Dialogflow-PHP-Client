@@ -15,6 +15,9 @@ to tidy up the code as best I can, and post it on github in case anyone else fin
  - Debugging mode that shows raw API responses if needed
  - Live demo at https://seanmaddison.uk/portfolio/chatbot-demo
 
+# Screenshot
+![Screenshot of the bot deployed on my website.](https://seanmaddison.uk/portfolio/images/bot-screenshot-1.PNG)
+
 # Installation
 1. Enable *curl* module in php.ini
 2. Enable *openssl* module in php.ini
