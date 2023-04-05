@@ -14,6 +14,10 @@
         $_SESSION['session_id'] = uniqid(BOT_NAME, true);
     }
     $session_id = $_SESSION['session_id'];
+
+    echo "client location: " . GOOGLE_API_PHP_CLIENT_LOCATION . "\n\n";
+    print_r($_ENV);
+
   ?>
 
   	<main>
@@ -71,7 +75,26 @@
       <section id="local-storage-container">
         <h3>Local storage contents</h3>
       </section>
-
+        <h3>PHP checks</h3>
+        <?php
+        // Make sure the two required PHP modules are available
+        if (function_exists('curl_init')) {
+            echo "<p>The curl module is enabled</p>";
+        } else {
+            echo "<p>The curl module is disabled</p>";
+        }
+        if (function_exists('openssl_open')) {
+            echo "<p>The openssl module is enabled</p>";
+        } else {
+            echo "<p>The openssl module is disabled</p>";
+        }
+        if (class_exists('Dotenv\Dotenv')) {
+            echo '<p>Dotenv is installed</p>';
+        } else {
+            echo '<p>Dotenv is not installed</p>';
+        }
+        ?>
+      </section>
       <?php } ?>
   	</main>
   </body>

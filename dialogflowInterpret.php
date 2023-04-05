@@ -30,8 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isset($input_message)) {
 
-	// Import Google API PHP client
-	require_once '../../libraries/google-api-php-client/vendor/autoload.php';
+
 
 	// Authenticate and fetch access token
 	$access_token_array = getAccessToken();
@@ -152,10 +151,8 @@ function parseForEssential($response, $access_token, $expire_time) {
 	  - Refreshes once the token has expired
 */
 function getAccessToken() {
-  // I've included this specific client library in the folder
-  // if you want to install the Google PHP Client library using composer or elsewhere, alter this
-  // More information at https://github.com/googleapis/google-api-php-client/#installation
-  require_once 'auth/autoload.php';
+	//Import Google API PHP client
+	require_once GOOGLE_API_PHP_CLIENT_LOCATION;
 
   // start session
   session_start();
