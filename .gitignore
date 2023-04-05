@@ -12,3 +12,5 @@ vendor/
 logs/*
 build/*
 .env
+composer.json
+componser.lock
