@@ -11,3 +11,4 @@ vendor/
 # Ignore log files and build output
 logs/*
 build/*
+.env
