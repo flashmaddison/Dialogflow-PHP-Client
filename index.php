@@ -14,10 +14,6 @@
         $_SESSION['session_id'] = uniqid(BOT_NAME, true);
     }
     $session_id = $_SESSION['session_id'];
-
-    echo "client location: " . GOOGLE_API_PHP_CLIENT_LOCATION . "\n\n";
-    print_r($_ENV);
-
   ?>
 
   	<main>
