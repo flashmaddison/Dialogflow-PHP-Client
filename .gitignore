@@ -14,3 +14,4 @@ build/*
 .env
 composer.json
 componser.lock
+.env
