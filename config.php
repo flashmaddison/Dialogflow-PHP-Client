@@ -1,19 +1,31 @@
 <?php
+// Load .env file with secret info
+// path to where you installed the dotenv package
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 /* 
 	Update these values with your preferences 
 */
 
 // Set the environment, can be DEV or PROD so far
-if (getenv('BOT_ENVIRONMENT') === 'PROD') {
-  define('BOT_ENVIRONMENT', 'PROD');
-} else {
+// 	define('BOT_ENVIRONMENT', 'DEV');
+
+// alternatively use the .env file to control it:
+// 	define('BOT_ENVIRONMENT', $_ENV['BOT_ENVIRONMENT']);
+
+// I use this logic to automatically set environment as dev when working locally, otherwise PROD :)
+if ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' || $_SERVER['HTTP_HOST'] == 'codeprojects') {
   define('BOT_ENVIRONMENT', 'DEV');
+} else {
+  define('BOT_ENVIRONMENT', 'PROD');
 }
 
-// Currently just used to generate session ID
+// Set the bot name, currently just used to generate session ID
 define('BOT_NAME', 'Flashbot');
 
-// When set to FULL, the total Dialogflow JSON is returned from the API. If set to ESSENTIAL, it only includes key items
+// When set to FULL, the total Dialogflow JSON is returned from the API for processing. If set to ESSENTIAL, it only includes key items
 // See function parseForEssential() in dialogflowInterpret.php
 define('JSON_RESPONSE_MODE', 'ESSENTIAL');
 
@@ -27,12 +39,6 @@ date_default_timezone_set('Europe/London');
 /* 
 	Update the .env file with your Dialogflow agent information and secret key file.
 */
-
-// Load .env file with secret info
-// path to where you installed the dotenv package
-require_once __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 // Path to where you installed the PHP Client composer package
 define('GOOGLE_API_PHP_CLIENT_LOCATION', $_ENV['GOOGLE_API_PHP_CLIENT_LOCATION']);
