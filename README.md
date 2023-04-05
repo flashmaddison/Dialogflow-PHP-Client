@@ -25,12 +25,13 @@ to tidy up the code as best I can, and post it on github in case anyone else fin
 2. Enable *openssl* module in php.ini
 3. install [Google APIs Client Library for PHP](https://github.com/googleapis/google-api-php-client/#installation)
 4. install [vlucas/phpdotenv package](https://github.com/vlucas/phpdotenv)
-5. Setup your Dialogflow CX agent
+5. Setup your Dialogflow CX project and an agent flow
 6. Create a service account for your agent using the Google cloud console. It needs to at least have *Dialogflow Client API* permission.
 7. Download the .json key file for the service account and place it somewhere the PHP pages can access
     - **Important:** make sure browsers can't view or download this file! I've include a .htaccess file that instructs Apache2.4 to disallow this
-8. Edit *.env* file with your agent details and file locations
-9. Edit *config.php* to input your Dialogflow agent information, path to your .json key file, and other settings
+8. Edit *.env* file with your agent details and file locations, using the *.env-example* file as a template
+    - **Important:** make sure browsers can't view or download your .env file! I've specified a .htaccess file for this
+9. Edit *config.php* to tweak the options that are there if needed
 10. Browse to index.php to try out the client!
 11. Customise and use :)
 
