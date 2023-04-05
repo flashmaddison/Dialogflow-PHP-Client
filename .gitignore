@@ -11,5 +11,6 @@ vendor/
 # Ignore log files and build output
 logs/*
 build/*
-composer.json
-componser.lock
+# composer.json
+# componser.lock
+*.lock

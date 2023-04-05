@@ -1,6 +1,7 @@
 <?php
 // Load .env file with secret info
-// path to where you installed the dotenv package
+
+// path to where you installed the dotenv and google-api-php-client packages
 require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
