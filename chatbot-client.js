@@ -34,7 +34,7 @@ function sendMessage() {
 function resetAndRefresh(do_refresh) {
   // Send an AJAX request to reset the session
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', '/portfolio/chatbot-demo/reset_session.php');
+  xhr.open('POST', 'resetSession.php');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   if(do_refresh) {
     xhr.onload = function() {
