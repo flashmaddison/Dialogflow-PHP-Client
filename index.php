@@ -5,18 +5,18 @@
   </head>
   <body style="width: 70%; min-width: 800px; margin: auto;">
 
-  <?php
-    require_once 'config.php';
-
-    // Create a unique session ID for the API calls and persistence if one doesn't exist
-    session_start();
-    if (!isset($_SESSION['session_id'])) {
-        $_SESSION['session_id'] = uniqid(BOT_NAME, true);
-    }
-    $session_id = $_SESSION['session_id'];
-  ?>
-
   	<main>
+      <!-- Chatbot client starts -->
+      <?php
+        require_once 'config.php';
+
+        // Create a unique session ID for the API calls and persistence if one doesn't exist
+        session_start();
+        if (!isset($_SESSION['session_id'])) {
+            $_SESSION['session_id'] = uniqid(BOT_NAME, true);
+        }
+        $session_id = $_SESSION['session_id'];
+      ?>
       <script>
         // tells JavaScript what the session ID is
         function getSessionId() {
@@ -92,6 +92,7 @@
         ?>
       </section>
       <?php } ?>
+      <!-- Chatbot client ends -->
   	</main>
   </body>
 </html>
