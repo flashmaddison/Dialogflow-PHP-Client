@@ -38,11 +38,11 @@ if (isset($input_message)) {
 	$expire_time = $access_token_array[1];
 
 	/* MAKE REQUEST */
-	// Set the endpoint URL, configure this for your dialogflow agent
+	// Set the endpoint URL
 
 	// you can alter this URL for other Dialogflow REST API requests, this is set to detect the intent based on raw user input
 	// More info at https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3-overview
-	// config.php contains the settings for this URL
+	// Your .env file and config.php contains the settings for this
 	$endpoint_url = "https://" . DF_API_LOCATION . "-dialogflow.googleapis.com/" . DF_API_VERSION . "/projects/" . DF_API_PROJECT_ID . "/locations/" . DF_API_LOCATION . "/agents/" . DF_API_AGENT_ID . "/sessions/" . $session_id . ":detectIntent";
 	// echo $endpoint_url;
 
