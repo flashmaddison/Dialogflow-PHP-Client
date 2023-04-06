@@ -151,8 +151,6 @@ function parseForEssential($response, $access_token, $expire_time) {
 	  - Refreshes once the token has expired
 */
 function getAccessToken() {
-	// Import Google API PHP client files
-	// require_once GOOGLE_API_PHP_CLIENT_LOCATION;
 
   // start session
   session_start();

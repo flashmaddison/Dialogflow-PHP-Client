@@ -41,9 +41,6 @@ date_default_timezone_set('Europe/London');
 	Update the .env file with your Dialogflow agent information and secret key file.
 */
 
-// Path to where you installed the PHP Client composer package
-define('GOOGLE_API_PHP_CLIENT_LOCATION', $_ENV['GOOGLE_API_PHP_CLIENT_LOCATION']);
-
 // JSON key from your google cloud service account that has the right permissions for this project
 define('SERVICE_ACCOUNT_KEY_PATH', $_ENV['SERVICE_ACCOUNT_KEY_PATH']);
 

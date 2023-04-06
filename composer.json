@@ -1,14 +1,6 @@
 {
     "require": {
-        "vlucas/phpdotenv": "*",
-        "google/apiclient": "^2.12.1"
-    },
-    "scripts": {
-        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
-    },
-    "extra": {
-        "google/Auth": [
-            "Client"
-        ]
+        "vlucas/phpdotenv": "^5.3",
+        "google/auth": "^1.24"
     }
 }
