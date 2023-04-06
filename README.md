@@ -24,9 +24,9 @@ to tidy up the code as best I can, and post it on github in case anyone else fin
 1. Enable *curl* module in php.ini
 2. Enable *openssl* module in php.ini
 2. Install dependencies
-        - install [Google APIs Client Library for PHP](https://github.com/googleapis/google-api-php-client/#installation)
-        - install [vlucas/phpdotenv package](https://github.com/vlucas/phpdotenv)
-        - I've included a *composer.json* file for these that only installs the required dependencies, just run `composer install` in the root directory once downloaded
+    - install [Google APIs Client Library for PHP](https://github.com/googleapis/google-api-php-client/#installation)
+    - install [vlucas/phpdotenv package](https://github.com/vlucas/phpdotenv)
+    - I've included a *composer.json* file for these that only installs the required dependencies, just run `composer install` in the root directory once downloaded
 5. Setup your Dialogflow CX project and an agent flow
 6. Create a service account for your agent using the Google cloud console. It needs to at least have *Dialogflow Client API* permission.
 7. Download the .json key file for the service account and place it somewhere the PHP pages can access
