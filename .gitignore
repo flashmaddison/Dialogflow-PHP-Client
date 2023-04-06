@@ -6,6 +6,8 @@
 
 # Ignore node_modules directory
 node_modules/
+
+# ignore vendor directory
 vendor/
 
 # Ignore log files and build output
