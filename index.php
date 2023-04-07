@@ -25,6 +25,25 @@
 
         // tell JavaScript what the environment is
         const environment = "<?php echo BOT_ENVIRONMENT; ?>";
+
+        /*
+          // Theme switcher
+
+        const root = document.querySelector(':root');
+        // Function to switch to Theme 1
+        function switchToLightTheme() {
+          //root.classList.remove('darkTheme');
+          root.classList.add('lightTheme');
+        }
+
+        // Function to switch to Theme 2
+        function switchToDarkTheme() {
+          root.classList.remove('lightTheme');
+          root.classList.add('darkTheme');
+        }
+
+        switchToLightTheme();
+        */
       </script>
 
       <script src="chatbot-client.js"></script>

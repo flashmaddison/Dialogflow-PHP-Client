@@ -30,8 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isset($input_message)) {
 
-
-
 	// Authenticate and fetch access token
 	$access_token_array = getAccessToken();
 	$access_token = $access_token_array[0];
@@ -176,4 +174,6 @@ function getAccessToken() {
   }
   return array($access_token, $expire_time);
 }
+
+// TODO: Add a parseGeneric function for future alternate integrations
 ?>

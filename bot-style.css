@@ -1,4 +1,4 @@
-/* theme variables */
+/* default theme variables */
 :root {
   --primary-colour: #5948A4;			/* Button background and borders */
   --secondary-colour: #705bce;		/* Lighter backgrounds and accents */
@@ -6,7 +6,30 @@
   --userSays-background: #383838; /* background of user content row in chatlog */
   --botSays-background: #212121;  /* background of bot content row in chatlog */
   --logSays-text-colour: #FFFFE0;	/* font colour for the log messages */
+
   --chatLog-font-colour: #41FF00;	/* does what it says, same colour for all content for now */
+}
+
+:root.darkTheme {
+  --primary-colour: #5948A4;			
+  --secondary-colour: #705bce;		
+
+  --userSays-background: #383838; 
+  --botSays-background: #212121;  
+  --logSays-text-colour: #FFFFE0;	
+
+  --chatLog-font-colour: #41FF00;	
+}
+
+:root.lightTheme {
+  --primary-colour: #7E718F;			
+  --secondary-colour: #565E71;		
+
+  --userSays-background: #FFFFFF; 
+  --botSays-background: #E0E0E0;  
+  --logSays-text-colour: #FFFFE0;	
+
+  --chatLog-font-colour: #0A0C19;	
 }
 
 /*** Chatbot client styling ***/
@@ -45,6 +68,7 @@
 	border-radius: 5px;
 	border: none;
 	font-size: 0.8em;
+	border: 1px solid var(--primary-colour);
 }
 
 .botSessionInfo {
@@ -62,6 +86,7 @@
 	align-items: left;
 	margin-top: 20px;
 	width: 100%;
+
 }
 
 /** form fields **/
